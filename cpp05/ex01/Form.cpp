@@ -25,9 +25,9 @@ Form::Form(std::string name) : _name(name), _signed(false), _signGrade(100), _ex
 Form::Form(std::string name, int signGrade, int execGrade) : _name(name), _signed(false), _signGrade(signGrade), _execGrade(execGrade)
 {
 	if (this->_signGrade < 1 || this->_execGrade < 1)
-		throw (AForm::GradeTooHighException());
+		throw (Form::GradeTooHighException());
 	if (this->_signGrade > 150 || this->_execGrade > 150)
-		throw (AForm::GradeTooLowException());
+		throw (Form::GradeTooLowException());
 	return ;
 }
 
